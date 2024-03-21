@@ -13,6 +13,6 @@ RUN apt update && apt install -y \
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN pip3 install pandas dbt dbt-duckdb prefect dagster duckdb
+RUN pip3 install pandas dbt dbt-duckdb prefect dagster duckdb pytest
 
 CMD ["tail", "-f", "/dev/null"]
